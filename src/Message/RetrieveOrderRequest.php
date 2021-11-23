@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace Omnipay\Payop\Message;
 
@@ -41,7 +41,7 @@ class RetrieveOrderRequest extends AbstractRequest
      *
      * @return array
      */
-    public function getData() : array
+    public function getData(): array
     {
         return array_merge($this->getCustomData(), []);
     }
@@ -49,7 +49,7 @@ class RetrieveOrderRequest extends AbstractRequest
     /**
      * Send data and return response instance.
      *
-     *
+     * https://github.com/Payop/payop-api-doc/blob/master/Invoice/getInvoice.md
      *
      * @param mixed $body
      *
@@ -58,8 +58,9 @@ class RetrieveOrderRequest extends AbstractRequest
     public function sendData($body)
     {
         $headers = [
-            'Authorization' => 'Bearer '.$this->getAccessToken(),
-            'Content-Type'  => 'application/json'
+            'Authorization' => 'Bearer ' . $this->getAccessToken(),
+            'Content-Type' => 'application/json',
+            'Accept' => 'application/json'
         ];
 
         $httpResponse = $this->httpClient->request(
@@ -79,7 +80,7 @@ class RetrieveOrderRequest extends AbstractRequest
      *
      * @return string
      */
-    public function getHttpMethod() : string
+    public function getHttpMethod(): string
     {
         return 'GET';
     }
@@ -90,7 +91,7 @@ class RetrieveOrderRequest extends AbstractRequest
      *
      * @return Response
      */
-    protected function createResponse($data, $headers = []) : Response
+    protected function createResponse($data, $headers = []): Response
     {
         return $this->response = new Response($this, $data, $headers);
     }
@@ -98,10 +99,10 @@ class RetrieveOrderRequest extends AbstractRequest
     /**
      * @return string
      */
-    public function getEndpoint() : string
+    public function getEndpoint(): string
     {
         $orderId = $this->getOrderId();
 
-        return $this->getUrl().'invoices/'.$orderId;
+        return $this->getUrl() . 'invoices/' . $orderId;
     }
 }

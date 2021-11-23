@@ -81,9 +81,9 @@ class PurchaseRequest extends AbstractRequest
     }
 
     /**
-     * Prepare the data for creating the order.
+     * Prepare the data for creating the invoice.
      *
-     *
+     * https://github.com/Payop/payop-api-doc/blob/master/Invoice/createInvoice.md
      *
      * @return array
      * @throws \Omnipay\Common\Exception\InvalidRequestException
