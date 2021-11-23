@@ -1,4 +1,4 @@
-# Omnipay Revoult
+# Omnipay PayOp
 PayOp gateway for Omnipay payment processing library
 This package has implemented the Merchant API of PayOp Payment systems
 For more information please visit the following link:[Developer Document]()
@@ -81,7 +81,7 @@ OR
 ```
 
 # Capture an order
-Please refer to the [Developer Document](https://developer.revolut.com/api-reference/merchant/#operation/captureOrder) for more information.
+Please refer to the [Developer Document]() for more information.
 
 ```php
 
@@ -126,7 +126,7 @@ OR
 ```
 
 # Refund an order
-Please refer to the [Developer Document](https://developer.revolut.com/api-reference/merchant/#operation/refundOrder) for more information.
+Please refer to the [Developer Document]() for more information.
 
 ```php
 
@@ -174,7 +174,7 @@ OR
 ```
 
 # Retrieve an order
-Please refer to the [Developer Document](https://developer.revolut.com/api-reference/merchant/#operation/retrieveOrder) for more information.
+Please refer to the [Developer Document]() for more information.
 
 ```php
 
